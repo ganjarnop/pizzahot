@@ -43,7 +43,6 @@ body {
     font-size: 2.3em;
     font-weight: 700;
     color: #fff;
-    font-style: italic;
 }
 
 .navbar-logo span {
@@ -309,7 +308,7 @@ body {
 
 /* Footer */
 footer {
-    background-color: #010101;
+    background-color: sandybrown;
     text-align: center;
     padding: 1rem 0;
     margin-top: 0;
@@ -320,12 +319,12 @@ footer .social {
 }
 
 footer .social a {
-    color: #fff;
+    color: #010101;
     margin: 1rem;
 }
 
 footer .social a:hover {
-    color: sandybrown;
+    color: #fff;
 }
 
 footer .link {
@@ -333,16 +332,17 @@ footer .link {
 }
 
 .link a {
-    color: #fff;
+    color: #010101;
     padding: 0.7rem 1rem;
 }
 
 .link a:hover {
-    color: sandybrown;
+    color: #fff;
 }
 
 .credit {
     font-size: 0.8rem;
+    color: #010101;
 }
 
 .credit a {

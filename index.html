@@ -9,12 +9,15 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap"
         rel="stylesheet">
     <!-- Fonts end -->
 
     <!-- Feather Icons-->
     <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Aos start-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- My styles-->
     <link rel="stylesheet" href="css/style.css">
@@ -54,13 +57,14 @@
 
     <!-- About Section-->
     <section id="about" class="about">
-        <h2><span>Tentang</span> Kami</h2>
+        <h2 data-aos="fade-up" data-aos-duration="1000"><span>Tentang</span> Kami</h2>
 
         <div class="row">
             <div class="about-img">
-                <img src="img/pizza-tentang-kami.jpg" alt="Tentang Kami">
+                <img src="img/pizza-tentang-kami.jpg" alt="Tentang Kami" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="200">
             </div>
-            <div class="content-tkami">
+            <div class="content-tkami" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                 <h3>Kenapa harus pizzahot ?</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum vel dolor incidunt, nam aliquam
                     suscipit!</p>
@@ -73,26 +77,30 @@
 
     <!-- Menu Section -->
     <section id="menu-kami" class="menu-kami">
-        <h2><span>Menu</span> Kami</h2>
-        <p>Silahkan Pilih Menu :</p>
+        <h2 data-aos="fade-up" data-aos-duration="1000"><span>Menu</span> Kami</h2>
+        <p data-aos="fade-up" data-aos-duration="2000">Silahkan Pilih Menu :</p>
         <div class="row-menu">
             <div class="menu-card">
-                <img src="img/1.jpg" class="menu-img-1">
+                <img src="img/1.jpg" class="menu-img-1" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="100">
                 <h3 class="menu-tittle-1">-Mozarella-</h3>
                 <p class="menu-price-1">IDR 15K</p>
             </div>
             <div class="menu-card">
-                <img src="img/1.jpg" class="menu-img-1">
+                <img src="img/1.jpg" class="menu-img-1" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="200">
                 <h3 class="menu-tittle-1">-Mozarella-</h3>
                 <p class="menu-price-1">IDR 15K</p>
             </div>
             <div class="menu-card">
-                <img src="img/1.jpg" class="menu-img-1">
+                <img src="img/1.jpg" class="menu-img-1" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="300">
                 <h3 class="menu-tittle-1">-Mozarella-</h3>
                 <p class="menu-price-1">IDR 15K</p>
             </div>
             <div class="menu-card">
-                <img src="img/1.jpg" class="menu-img-1">
+                <img src="img/1.jpg" class="menu-img-1" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="400">
                 <h3 class="menu-tittle-1">-Mozarella-</h3>
                 <p class="menu-price-1">IDR 15K</p>
             </div>
@@ -102,13 +110,16 @@
 
     <!-- Contact Section-->
     <section id="contact" class="contact">
-        <h2><span>Kontak</span> Kami</h2>
-        <p>silahkan hubungi kami !</p>
+        <h2 data-aos="fade-up" data-aos-duration="1000"><span>Kontak</span> Kami</h2>
+        <p data-aos="fade-up" data-aos-duration="1000">silahkan hubungi kami !</p>
 
         <div class="contact-row">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31722.945097212036!2d106.6668441108398!3d-6.3463521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e5be60b60491%3A0x8cfe4bcfd816ddd3!2sPizza%20Hut%20Ristorante!5e0!3m2!1sid!2sid!4v1728536011720!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31722.945097212036!2d106.6668441108398!3d-6.3463521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e5be60b60491%3A0x8cfe4bcfd816ddd3!2sPizza%20Hut%20Ristorante!5e0!3m2!1sid!2sid!4v1728536011720!5m2!1sid!2sid"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"
+                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></iframe>
 
-            <form action="">
+            <form action="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                 <div class="input-group">
                     <i data-feather="user"></i>
                     <input type="text" placeholder="nama">
@@ -151,6 +162,12 @@
     <!-- Feather icons -->
     <script>
         feather.replace();
+    </script>
+
+    <!-- Aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 
     <!-- My javascript-->
