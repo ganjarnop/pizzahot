@@ -37,23 +37,28 @@ body {
     left: 0;
     right: 0;
     z-index: 9999;
+
 }
 
+
 .navbar-logo {
-    font-size: 2.3em;
-    font-weight: 700;
+    font-size: 2.5em;
+    font-weight: 500;
     color: #fff;
+    font-style: italic;
 }
 
 .navbar-logo span {
     color: sandybrown;
 }
 
+
 .navbar-nav a {
     color: #fff;
     display: inline-block;
     font-size: 1.2rem;
-    margin: 0 1rem;
+    margin: 0 1.5rem;
+    font-weight: 300;
 }
 
 
@@ -87,6 +92,92 @@ body {
     display: none;
 }
 
+/* Navbar Search Form */
+.navbar .search-form {
+    position: absolute;
+    top: 100%;
+    right: 8%;
+    background-color: #fff;
+    width: 30rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s linear;
+}
+
+.navbar .search-form.active {
+    transform: scaleY(1);
+}
+
+.navbar .search-form input {
+    width: 100%;
+    height: 100%;
+    font-size: 1.3rem;
+    color: #010101;
+    padding: 1rem;
+    font-style: italic;
+}
+
+.navbar  .search-form label {
+    cursor: pointer;
+    color: #010101;
+    font-size: 1rem;
+    margin-right: 1.2rem;
+}
+
+/* Shopping cart Menu */
+.keranjang {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 30rem;
+    height: 100vh;
+    background-color: rgba(1, 1, 1, 0.8);
+    color: #fff;
+    padding: 0 1.5rem;
+    transition: 0.3s all ease-in-out;
+}
+
+.keranjang.active {
+    left: 0;
+}
+
+.keranjang .k-item {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #fff;
+    position: relative;
+}
+
+.keranjang .k-item img {
+    height: 6rem;
+    border-radius: 50%;
+}
+
+.keranjang .k-detail h3 {
+    font-size: 1.3rem;
+    padding-bottom: 0.5rem
+}
+
+.keranjang .k-detail .k-price {
+    font-size: 1.2rem;
+}
+
+.keranjang .k-item .k-remove {
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.keranjang .k-item .k-remove:hover {
+    color: sandybrown;
+    transition: 0.3s linear;
+}
 /* Hero section */
 .hero {
     min-height: 100vh;
@@ -110,16 +201,17 @@ body {
 }
 
 .content {
-    padding: 1.3rem 6%;
+    padding: 1.3rem 7%;
     max-width: 60rem;
     height: 33rem;
 }
 
 .content h1 {
-    font-size: 4.8em;
+    font-size: 4.1em;
     color: #fff;
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
     line-height: 1.1;
+    margin-top: 6rem;
 }
 
 .content h1 span {
@@ -127,28 +219,36 @@ body {
 }
 
 .content p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.4;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     font-weight: 100;
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
     mix-blend-mode: difference;
 }
 
 .content .cta {
-    margin-top: 1rem;
+    cursor: pointer;
+    margin-top: 2rem;
     display: inline-block;
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
+    padding: 0.8rem 2.3rem;
+    font-size: 1.3rem;
+    font-weight: 500;
     color: #fff;
     background-color: sandybrown;
-    border-radius: 5px;
+    border-radius: 50px;
     box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+
+}
+
+.content .cta:hover {
+    background-color: rgb(214, 122, 42);
 }
 
 /* About Section */
 .about,
-.contact {
+.contact,
+.produk {
     padding: 10rem 7% 1.4rem;
     color: #fff;
     background-color: #010101;
@@ -162,12 +262,14 @@ body {
 }
 
 .about h2 span,
+.produk h2 span,
 .contact h2 span {
     color: sandybrown;
 }
 
 .about .row {
     display: flex;
+    margin-top: 4.5rem;
 }
 
 .about .row .about-img {
@@ -175,8 +277,8 @@ body {
 }
 
 .about .row .about-img img {
-    width: 100%;
-    border-radius: 15px;
+    width: 95%;
+    border-radius: 5px;
 }
 
 .about .row .content-tkami {
@@ -207,6 +309,7 @@ body {
     text-align: center;
     font-size: 2.6rem;
     margin-bottom: 1rem;
+    margin-top: 3rem;
 }
 
 .menu-kami h2 span {
@@ -225,7 +328,7 @@ body {
 .row-menu {
     display: flex;
     text-wrap: wrap;
-    margin-top: 5rem;
+    margin-top: 6rem;
     justify-content: center;
 }
 
@@ -243,6 +346,90 @@ body {
     margin-top: 2.5rem;
 }
 
+/* Produk Section */
+.produk h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.produk p {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 100;
+    line-height: 1.6;
+    font-size: 1.3rem;
+}
+
+.produk .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.produk .p-card {
+    text-align: center;
+    border: 1px solid #888;
+    padding: 2rem;
+    margin-bottom: 4rem;
+}
+
+.produk .p-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.5rem;
+}
+
+.produk .p-icons a {
+    width: 4rem;
+    height: 4rem;
+    color: #fff;
+    margin: 0.5rem;
+    border: 1px solid #888;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.produk .p-icons a:hover {
+    background-color: sandybrown;
+    transition: 0.3s all ease-in-out;
+}
+
+.produk .p-image img {
+    height: 25rem;
+    margin-top: 1rem;
+}
+
+.produk .p-content h3 {
+    font-size: 1.7rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+}
+
+.produk .p-stars {
+    font-size: 0.3rem;
+    padding: 0.7rem;
+    color: sandybrown;
+}
+
+.produk .p-stars .star {
+    fill: sandybrown;
+}
+
+.produk .p-price {
+    font-size: 1.3rem;
+}
+.produk .p-price span {
+    text-decoration: line-through;
+    font-size: 1rem;
+}
+/* Produk Section End*/
+
 /* Contact Section */
 .contact h2 {
     margin-bottom: 1rem;
@@ -254,12 +441,13 @@ body {
     margin: auto;
     font-weight: 100;
     line-height: 1.6;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .contact .contact-row {
     display: flex;
-    margin-top: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     background-color: #222;
 }
 
@@ -287,7 +475,7 @@ body {
 .input-group input {
     width: 100%;
     padding: 2rem;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     background: none;
     color: #fff;
 }
@@ -298,8 +486,13 @@ body {
     display: inline-block;
     padding: 1rem 2rem;
     background-color: sandybrown;
-    font-size: 1.5rem;
-    border-radius: 5px;
+    font-size: 1.3rem;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.submit:hover {
+    background-color: rgb(187, 110, 42);
 }
 
 .submit a {
@@ -352,21 +545,25 @@ footer .link {
 
 /* Media Queris */
 
-/* Laptop */
-@media (max-width: 1366px) {
+/* Dekstop */
+@media (max-width: 1279px) {
     html {
         font-size: 75%;
     }
 }
 /* Tablet */
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     html {
         font-size: 62.5%;
     }
 
     #menu {
         display: inline-block;
+    }
+
+    .navbar-logo {
+        font-size: 4.5vw;
     }
 
     .navbar-nav {
@@ -388,7 +585,7 @@ footer .link {
         display: block;
         margin: 1.5rem;
         padding: 0.5rem;
-        font-size: 1.5rem;
+        font-size: 1.9rem;
     }
 
     .navbar-nav a::after {
@@ -399,9 +596,27 @@ footer .link {
         transform: scaleX(0.3);
     }
 
+    .navbar .search-form {
+        width: 35rem;
+        height: 4rem;
+    }
+
+    .navbar .search-form input {
+        font-size: 1.7rem;
+        font-style: italic;
+    }
+
+    .content .cta {
+        font-size: 2.5vw;
+    }
+
     .row {
         flex-wrap: wrap;
         display: flex;
+    }
+
+    .about h2 {
+        font-size: 3rem;
     }
 
     .about-img {
@@ -410,21 +625,51 @@ footer .link {
     }
 
     .about .row .about-img img {
-        height: 24rem;
+        width: 80%;
         object-fit: cover;
+        margin-left: 7rem;
+        margin-top: 2.3rem;
     }
+
+    .about .row .content-tkami {
+        margin-left: 6.5rem;
+    }
+
 
     .about .row .content-tkami h3 {
         line-height: 2;
-        font-size: 2rem;
+        font-size: 2.2rem;
+        margin-top: 2.8rem;
     }
 
     .about .row .content-tkami p {
         font-size: 1.5rem;
     }
 
+    .menu-kami h2 {
+        font-size: 3rem;
+    }
+
     .row-menu {
         flex-wrap: wrap;
+    }
+
+    .menu-img-1 {
+        width: 43%;
+    }
+
+    .menu-card h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .menu-card p {
+        margin-bottom: 4rem;
+        font-size: 2.5rem;
+    }
+
+    .contact h2 {
+        font-size: 3rem;
     }
 
     .contact-row {
@@ -440,31 +685,75 @@ footer .link {
     }
 
 }
-/* Handphone */
+/* Mobile */
 
-@media (max-width: 450px) {
+@media (max-width: 767px) {
     html {
         font-size: 55%;
     }
 
     .navbar-logo {
-        font-size: 3.5em;
+        font-size: 3.4em;
+    }
+
+    .navbar-nav {
+        width: 20rem;
+        line-height: 4rem;
     }
 
     .navbar-nav a {
-        font-size: 2em;
+        font-size: 1.7em;
+    }
+
+    .navbar .search-form {
+        width: 25rem;
     }
 
     .content h1 {
-        font-size: 4em;
+        font-size: 3.5em;
     }
 
-    .row .about-img img {
-        width: 60%;
+    .content .cta {
+        font-size: 1.7rem;
+    }
+
+    .about h2 {
+        margin-bottom: 5rem;
+    }
+
+    .about .row .about-img img {
+        width: 80%;
+        margin-left: 3.8rem;
+    }
+
+    .about .row .content-tkami {
+        margin-left: 3.3rem
     }
 
     .menu-img-1 {
         width: 50%;
+    }
+
+    .menu-card p {
+        font-size: 2rem;
+    }
+
+    .produk .p-content h3 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .produk .p-stars {
+        font-size: 0.1rem;
+    }
+
+    .produk .p-price {
+        font-size: 1.6rem;
+        margin-top: 0.5rem;
+    }
+
+    .produk .p-price span {
+        font-size: 1.2rem;
     }
 
 }
